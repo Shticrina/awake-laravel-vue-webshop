@@ -4306,24 +4306,30 @@ __webpack_require__.r(__webpack_exports__);
       users: []
     };
   },
-  mounted: function mounted() {
+  beforeMount: function beforeMount() {
     var _this = this;
 
     axios.get('/api/users/').then(function (response) {
+      console.log(response.data);
       _this.users = response.data;
     })["catch"](function (error) {
       console.error(error);
     });
-    axios.get('/api/admin-products/').then(function (response) {
+    axios.get('/api/products/').then(function (response) {
+      console.log(response.data);
       _this.products = response.data.products;
     })["catch"](function (error) {
       console.error(error);
     });
     axios.get('/api/orders/').then(function (response) {
+      console.log(response.data);
       _this.orders = response.data;
     })["catch"](function (error) {
       console.error(error);
     });
+  },
+  mounted: function mounted() {
+    console.log(this.users);
   }
 });
 
@@ -93524,46 +93530,32 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("div", { staticClass: "d-flex justify-content-start my-4 px-4" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
-        },
-        [
+    _c(
+      "div",
+      {
+        staticClass:
+          "d-flex container justify-content-center align-items-center my-4"
+      },
+      [
+        _c("div", { staticClass: "bg-secondary mx-5 px-5 py-3 big-text" }, [
           _c("a", { attrs: { href: "/admin/orders" } }, [
             _vm._v("Orders (" + _vm._s(_vm.orders.length) + ")")
           ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
-        },
-        [
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "bg-secondary mx-5 px-5 py-3 big-text" }, [
           _c("a", { attrs: { href: "/admin/products" } }, [
             _vm._v("Products (" + _vm._s(_vm.products.length) + ")")
           ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass:
-            "col-md-4 product-box d-flex align-content-center justify-content-center flex-wrap big-text"
-        },
-        [
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "bg-secondary mx-5 px-5 py-3 big-text" }, [
           _c("a", { attrs: { href: "/admin/users" } }, [
             _vm._v("Users (" + _vm._s(_vm.users.length) + ")")
           ])
-        ]
-      )
-    ])
+        ])
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -112835,6 +112827,18 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('formatDate', function (value)
   }*/
 }); // Vue.use(VueRouter);
 
+
+/*import Home from './components/Home';
+import Login from './components/Login';
+import Register from './components/Register';
+import SingleProduct from './components/SingleProduct';
+import Checkout from './components/Checkout';
+import Cart from './components/Cart';*/
+// import BancontactLand from './components/BancontactLand';
+
+/*import UserBoard from './components/UserBoard';
+import OrderDetails from './components/userboard/OrderDetails';
+import Admin from './components/Admin';*/
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$gblData = "something";
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({

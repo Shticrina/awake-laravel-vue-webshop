@@ -12,6 +12,7 @@ class OrderController extends Controller
 {
     public function index()
     {
+        // dd(Order::with(['orderItems'])->get()); // ok
         return response()->json(Order::with(['orderItems'])->get(),200);
     }
         

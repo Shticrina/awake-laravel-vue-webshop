@@ -17,8 +17,8 @@ use Illuminate\Http\Request;
     return $request->user();
 });*/
 
-Route::post('login', 'UserController@login');
-Route::post('register', 'UserController@register');
+Route::post('/login', 'UserController@login');
+Route::post('/register', 'UserController@register');
 
 Route::get('/products', 'ProductController@index')->name('home');
 Route::post('/upload-file', 'ProductController@uploadFile');
@@ -63,6 +63,7 @@ Route::group(['middleware' => 'auth:api'], function() {
     Route::post('categories/delete', 'CategoryController@destroy')->name('admin.categories.delete');
 
     // Products Admin
+    Route::get('products', 'ProductController@index')->name('admin.products.index');
     Route::get('products/{product}', 'ProductController@edit')->name('admin.products.edit');
     Route::post('products/storeOrUpdate', 'ProductController@storeOrUpdate')->name('admin.products.update');
     Route::post('products/delete', 'ProductController@destroy')->name('admin.products.delete');

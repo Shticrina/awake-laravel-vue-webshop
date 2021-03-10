@@ -70,17 +70,6 @@ Vue.filter('formatDate', function(value) {
 // Vue.use(VueRouter);
 
 import App from './components/App';
-/*import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import SingleProduct from './components/SingleProduct';
-import Checkout from './components/Checkout';
-import Cart from './components/Cart';*/
-// import BancontactLand from './components/BancontactLand';
-/*import UserBoard from './components/UserBoard';
-import OrderDetails from './components/userboard/OrderDetails';
-import Admin from './components/Admin';*/
-
 
 Vue.prototype.$gblData = "something";
 

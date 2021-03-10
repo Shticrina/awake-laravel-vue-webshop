@@ -112836,18 +112836,6 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.filter('formatDate', function (value)
 }); // Vue.use(VueRouter);
 
 
-/*import Home from './components/Home';
-import Login from './components/Login';
-import Register from './components/Register';
-import SingleProduct from './components/SingleProduct';
-import Checkout from './components/Checkout';
-import Cart from './components/Cart';*/
-// import BancontactLand from './components/BancontactLand';
-
-/*import UserBoard from './components/UserBoard';
-import OrderDetails from './components/userboard/OrderDetails';
-import Admin from './components/Admin';*/
-
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.prototype.$gblData = "something";
 var app = new vue__WEBPACK_IMPORTED_MODULE_0___default.a({
   el: '#app',

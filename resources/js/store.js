@@ -176,7 +176,13 @@ let store = new Vuex.Store({
 			}
 		},
 		getAllProducts: ({ commit, dispatch }) => {
-	        axios.get("/api/products/")
+			// headers: Access-Control-Allow-Origin
+	        axios.get("/api/products/", {
+				headers: { 
+					'Access-Control-Allow-Origin' : '*',
+        			'Access-Control-Allow-Methods' : 'GET,PUT,POST,DELETE,PATCH,OPTIONS'
+				}
+			})
 	        .then(response => {
 	        	dispatch('addDetailsToProducts', response.data.products);
 	            commit('SET_CATEGORIES', response.data.categories);
